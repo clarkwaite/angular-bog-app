@@ -11,7 +11,6 @@ function CreatureController($stateParams, creaturesServices, $state) {
     });
   }
   vm.goToEdit = function() {
-    console.log('the button is working')
     $state.go('editCreature', {creature: vm.creature, id: vm.creature.id})
   }
 }

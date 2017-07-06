@@ -9,7 +9,7 @@ function EditCreatureController($stateParams, $http, creaturesServices, $state) 
     description: $stateParams.creature.description
   };
 
-  vm.editCreature = function () {
+  vm.editCreature = function() {
     creaturesServices.editCreature(vm.creature).then(
       function success(response) {
       $state.go("index");
@@ -19,6 +19,18 @@ function EditCreatureController($stateParams, $http, creaturesServices, $state) 
 
       });
   };
+
+  vm.deleteCreature = function() {
+    creaturesServices.deleteCreature(vm.creature).then(
+      function success(response) {
+      $state.go("index");
+      },
+      function failure(response) {
+        console.log('Failed to Delete');
+
+      });
+  };
+  
 }
 
   export default EditCreatureController;

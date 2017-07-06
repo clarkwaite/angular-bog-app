@@ -26,6 +26,10 @@ function creaturesServices($http) {
 		return $http.patch('/creatures/' + editCreature.id, editCreature)
 	};
 
+	service.deleteCreature = function (deleteCreature) {
+		return $http.delete('/creatures/' + deleteCreature.id )
+	};
+
 	return service;
 }
 
