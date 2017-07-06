@@ -1,0 +1,8 @@
+<h1>This Bog Has A Lot Of Creatures In It!</h1>
+
+<ul>
+  <li ng-repeat="creature in $ctrl.creatures" ui-sref="creature({id: creature.id})">
+    <p>{{creature.name}}</p>
+    <p>{{creature.description}}</p>
+  </li>
+</ul>
